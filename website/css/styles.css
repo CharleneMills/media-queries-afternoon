@@ -1,0 +1,181 @@
+/* ====================== Mobile and Up ========================== */
+
+body{
+    margin: 0px;
+    font-family: arial;
+    overflow-x: hidden;
+}
+
+.hero-container{
+    background-image: url('../img/header-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    padding: 20px 40px;
+    background-color: #212529;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+
+.logo img{
+    width: 200px;
+}
+
+nav.desktop{
+    display: none;
+}
+
+nav.mobile{
+    display: inline-block;
+}
+
+nav.mobile div{
+    display: none;
+    position: absolute;
+    top: 78px;
+    width: 100%;
+    background-color: #212529;
+    left: 0;
+}
+
+nav.mobile div.open{
+    display: inline-block;
+    overflow: hidden;
+    animation-name: slideDown;
+    animation-duration: 1s;
+    z-index: 0;
+    animation-timing-function: linear;
+}
+
+nav.mobile a{
+    display: block;
+} 
+
+nav a{
+    text-transform: uppercase;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 20px;
+}
+
+nav a:hover{
+    color: #fed136;
+}
+
+
+.hero-text{
+    padding: 40px 40px 100px 40px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+
+.hero-text h1{
+    font-size: 72px;
+    font-family: "Montserrat";
+}
+
+.welcome-font{
+    font-size: 28px;
+    font-style: italic;
+    font-family: arial;
+    font-family: "Droid Serif";
+    line-height: 28px;
+}
+
+.hero-text a, .mobile button{
+    background-color: #fed136;
+    color: white;
+    padding: 30px 50px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.mobile button{
+    padding: 10px 20px;
+    border: 0px;
+    font-size: 16px;
+}
+
+.mobile button:hover{
+    cursor: pointer;
+    background-color: #fec503;
+}
+
+.hero-text a:hover{
+    background-color: #fec503;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+
+@keyframes slideDown {
+	0% {
+        transform: translateY(-100%);
+    }	
+	100% {
+        transform: translateY(0%);
+	}		
+}
+
+
+
+
+
+/*End mobile and up styles*/
+
+
+
+/* ====================== Tablet Portrait and Up (Overrides Mobile Styles) ========================== */
+@media only screen and (min-width: 768px) {
+	
+}
+/*end media query*/
+
+/*End tablet and up styles*/
+
+/* ====================== Tablet Landscape and Up (Overrides Mobile and Tablet Portrait Styles) ========================== */
+@media only screen and (min-width: 992px) {
+	
+
+
+
+
+}
+/*end media query*/
+/*End landscape tablet and up styles*/
+
+
+
+
+/* ====================== Desktop Only (Overrides Mobile and Tablet Styles) ========================== */
+@media only screen and (min-width: 1200px) {
+	header {
+        background-color: transparent;
+      }
+
+    .hero-text{
+        padding: 250px;
+    }
+
+    nav.desktop{
+        display: inline-block;
+    }
+
+    nav.mobile{
+        display: none;
+    }
+
+      
+}
+/*end media query*/
+/*End desktop only styles*/
